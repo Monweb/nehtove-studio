@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LuxeNails Studio – Návrh webu</title>
+<title>UNO DUE – Manikúra & Pedikúra Praha 1</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
-
   :root {
     --rose: #c9406a;
     --rose-light: #f7e8ee;
@@ -15,42 +14,29 @@
     --gray: #6b7280;
     --light: #fdf8f9;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; color: var(--dark); background: white; }
 
   /* ── NAV ── */
   nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    position: sticky; top: 0; z-index: 50;
     background: rgba(255,255,255,0.96);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #f0e0e8;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 52px;
-    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 52px; height: 64px;
   }
-
-  .logo { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--rose); }
-  .logo span { color: var(--gold); }
-
+  .logo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); letter-spacing: 2px; }
+  .logo span { color: var(--rose); }
+  .logo-sub { font-size: 10px; color: var(--gray); letter-spacing: 3px; text-transform: uppercase; display: block; margin-top: -2px; }
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray); text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: var(--rose); }
-
   .nav-btn {
-    background: var(--rose);
-    color: white;
-    padding: 9px 22px;
-    border-radius: 22px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background .2s;
+    background: var(--rose); color: white;
+    padding: 9px 22px; border-radius: 22px;
+    font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s;
   }
   .nav-btn:hover { background: #a8304f; }
 
@@ -58,115 +44,71 @@
   .hero {
     background: linear-gradient(135deg, #fdf0f5 0%, #fff8f0 100%);
     padding: 96px 52px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 48px;
-    min-height: 88vh;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 48px; min-height: 88vh;
   }
-
   .hero-left { max-width: 520px; }
-
   .hero-tag {
-    display: inline-block;
-    background: var(--rose-light);
-    color: var(--rose);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 16px;
-    margin-bottom: 22px;
+    display: inline-block; background: var(--rose-light); color: var(--rose);
+    font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 16px; margin-bottom: 22px;
   }
-
-  .hero-left h1 { font-family: 'Playfair Display', serif; font-size: 58px; line-height: 1.1; margin-bottom: 20px; }
+  .hero-left h1 { font-family: 'Playfair Display', serif; font-size: 54px; line-height: 1.1; margin-bottom: 20px; }
   .hero-left h1 em { font-style: italic; color: var(--rose); }
   .hero-left p { font-size: 17px; color: var(--gray); line-height: 1.75; margin-bottom: 36px; }
-
   .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-
   .btn-rose {
-    background: var(--rose);
-    color: white;
-    padding: 14px 30px;
-    border-radius: 28px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all .3s;
-    display: inline-block;
+    background: var(--rose); color: white;
+    padding: 14px 30px; border-radius: 28px;
+    font-size: 15px; font-weight: 600; text-decoration: none; transition: all .3s; display: inline-block;
   }
   .btn-rose:hover { background: #a8304f; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,64,106,.28); }
-
   .btn-outline {
-    border: 2px solid var(--rose);
-    color: var(--rose);
-    padding: 12px 26px;
-    border-radius: 28px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all .3s;
-    display: inline-block;
+    border: 2px solid var(--rose); color: var(--rose);
+    padding: 12px 26px; border-radius: 28px;
+    font-size: 15px; font-weight: 600; text-decoration: none; transition: all .3s; display: inline-block;
   }
   .btn-outline:hover { background: var(--rose-light); }
-
   .hero-right { display: flex; flex-direction: column; gap: 16px; flex-shrink: 0; }
-
   .float-card {
-    background: white;
-    border-radius: 16px;
-    padding: 20px 26px;
-    box-shadow: 0 8px 32px rgba(0,0,0,.09);
-    min-width: 210px;
+    background: white; border-radius: 16px; padding: 20px 26px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.09); min-width: 210px;
   }
   .float-card .fc-label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
   .float-card .fc-val { font-size: 24px; font-weight: 700; color: var(--rose); }
   .float-card .fc-sub { font-size: 12px; color: var(--gray); margin-top: 2px; }
   .stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; }
 
+  /* ── TRUST BAR ── */
+  .trust {
+    background: var(--dark); padding: 16px 52px;
+    display: flex; gap: 40px; flex-wrap: wrap; align-items: center; justify-content: center;
+  }
+  .trust-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.65); font-size: 13px; font-weight: 500; }
+  .trust-item span { color: var(--gold); }
+
   /* ── SERVICES ── */
   .services { padding: 80px 52px; background: white; }
-
   .sec-head { text-align: center; margin-bottom: 52px; }
   .sec-tag {
-    display: inline-block;
-    background: var(--rose-light);
-    color: var(--rose);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 4px 14px;
-    border-radius: 12px;
-    margin-bottom: 12px;
+    display: inline-block; background: var(--rose-light); color: var(--rose);
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 12px; margin-bottom: 12px;
   }
   .sec-head h2 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 10px; }
   .sec-head p { font-size: 15px; color: var(--gray); }
-
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
   .scard {
-    border: 1.5px solid #f0dde6;
-    border-radius: 14px;
-    padding: 28px 24px;
-    transition: all .3s;
-    position: relative;
-    overflow: hidden;
+    border: 1.5px solid #f0dde6; border-radius: 14px; padding: 28px 24px;
+    transition: all .3s; position: relative; overflow: hidden;
   }
   .scard::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
     background: linear-gradient(90deg, var(--rose), var(--gold));
-    opacity: 0;
-    transition: opacity .3s;
+    opacity: 0; transition: opacity .3s;
   }
   .scard:hover { border-color: var(--rose); transform: translateY(-5px); box-shadow: 0 14px 36px rgba(201,64,106,.12); }
   .scard:hover::after { opacity: 1; }
-
   .scard-icon { font-size: 30px; margin-bottom: 12px; }
   .scard h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
   .scard p { font-size: 13px; color: var(--gray); line-height: 1.6; margin-bottom: 18px; }
@@ -179,15 +121,10 @@
   .why .sec-head h2 { color: white; }
   .why .sec-tag { background: rgba(201,64,106,.25); color: #f48fb1; }
   .why .sec-head p { color: rgba(255,255,255,.6); }
-
   .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
   .why-card {
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 14px;
-    padding: 26px 22px;
-    transition: all .3s;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 14px; padding: 26px 22px; transition: all .3s;
   }
   .why-card:hover { background: rgba(201,64,106,.15); border-color: rgba(201,64,106,.4); transform: translateY(-4px); }
   .why-icon { font-size: 28px; margin-bottom: 12px; }
@@ -195,19 +132,19 @@
   .why-card p { font-size: 13px; color: rgba(255,255,255,.55); line-height: 1.65; }
 
   /* ── CONTACT ── */
-  .contact { padding: 80px 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; background: var(--light); }
-
+  .contact {
+    padding: 80px 52px; display: grid; grid-template-columns: 1fr 1fr;
+    gap: 56px; align-items: center; background: var(--light);
+  }
   .contact-left h2 { font-family: 'Playfair Display', serif; font-size: 38px; margin-bottom: 14px; line-height: 1.2; }
   .contact-left p { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 28px; }
-
   .contact-item { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
   .ci-ico { width: 42px; height: 42px; background: var(--rose-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
   .ci-lbl { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: .8px; }
   .ci-val { font-size: 14px; font-weight: 600; color: var(--dark); }
-
+  .hours-note { font-size: 12px; color: var(--gray); margin-top: 3px; font-style: italic; }
   .contact-form { background: white; border-radius: 18px; padding: 36px 32px; box-shadow: 0 8px 40px rgba(0,0,0,.07); }
   .contact-form h3 { font-size: 20px; font-weight: 700; margin-bottom: 24px; }
-
   .fg { margin-bottom: 16px; }
   .fg label { display: block; font-size: 12px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
   .fg input, .fg textarea, .fg select {
@@ -218,7 +155,6 @@
   .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(201,64,106,.1); }
   .fg textarea { resize: vertical; min-height: 90px; }
   .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
   .submit-btn {
     width: 100%; background: var(--rose); color: white; border: none;
     padding: 13px; border-radius: 9px; font-size: 15px; font-weight: 600;
@@ -227,68 +163,68 @@
   .submit-btn:hover { background: #a8304f; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,64,106,.25); }
 
   /* ── FOOTER ── */
-  footer { background: var(--dark); color: rgba(255,255,255,.5); text-align: center; padding: 28px 52px; font-size: 13px; }
-  footer .flogo { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--rose); margin-bottom: 6px; }
-  footer .flogo span { color: var(--gold); }
+  footer {
+    background: var(--dark); color: rgba(255,255,255,.45);
+    padding: 32px 52px; display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px;
+  }
+  .flogo { font-family: 'Playfair Display', serif; font-size: 20px; color: white; letter-spacing: 2px; }
+  .flogo span { color: var(--rose); }
+  footer a { color: var(--gold); text-decoration: none; }
 
-  /* ══════════════════════════════════════
-     MOBILNÍ RESPONZIVITA
-  ══════════════════════════════════════ */
+  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 0 20px; height: 56px; }
     .nav-links { display: none; }
-    .logo { font-size: 18px; }
     .nav-btn { padding: 8px 16px; font-size: 13px; }
-
     .hero { flex-direction: column; padding: 56px 24px 48px; min-height: auto; text-align: center; gap: 36px; }
     .hero-left { max-width: 100%; }
     .hero-left h1 { font-size: 36px; }
-    .hero-left p { font-size: 15px; }
     .hero-btns { justify-content: center; }
-    .hero-right { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; }
+    .hero-right { flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%; gap: 12px; }
     .float-card { flex: 1; min-width: 130px; padding: 14px 16px; }
     .float-card .fc-val { font-size: 20px; }
-
+    .trust { padding: 16px 20px; gap: 16px; }
     .services { padding: 56px 20px; }
     .sec-head { margin-bottom: 32px; }
     .sec-head h2 { font-size: 28px; }
     .cards { grid-template-columns: 1fr; gap: 16px; }
-
     .why { padding: 56px 20px; }
     .why-grid { grid-template-columns: 1fr; gap: 14px; }
-
     .contact { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
     .contact-left h2 { font-size: 28px; }
     .contact-form { padding: 24px 20px; }
     .fg-row { grid-template-columns: 1fr; }
-
-    footer { padding: 24px 20px; font-size: 12px; }
+    footer { padding: 24px 20px; flex-direction: column; text-align: center; }
   }
-
   @media (max-width: 400px) {
     .hero-left h1 { font-size: 30px; }
     .btn-rose, .btn-outline { width: 100%; text-align: center; }
-    .hero-right { flex-direction: column; align-items: stretch; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="logo">Luxe<span>Nails</span></div>
+  <div class="logo">
+    UNO <span>DUE</span>
+    <span class="logo-sub">salon krásy · Praha 1</span>
+  </div>
   <ul class="nav-links">
     <li><a href="#sluzby">Služby</a></li>
     <li><a href="#proc-my">Proč my</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
-  <a href="#kontakt" class="nav-btn">Rezervovat</a>
+  <a href="#kontakt" class="nav-btn">Rezervovat termín</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-tag">✨ Profesionální péče o nehty</div>
-    <h1>Krása začíná<br>u vašich <em>rukou</em></h1>
-    <p>Dokonalé nehty, relaxační atmosféra a individuální přístup. Přijďte si odpočinout a odejděte s novou sebedůvěrou.</p>
+    <div class="hero-tag">✨ Manikúra & pedikúra · Praha 1 – Vodičkova</div>
+    <h1>Péče o nehty<br>ve <em>srdci Prahy</em></h1>
+    <p>Profesionální manikúra a pedikúra v salonu UNO DUE na Vodičkově ulici. Gelové nehty, shellac, japonská manikúra a mnoho dalšího — vše s individuálním přístupem.</p>
     <div class="hero-btns">
       <a href="#kontakt" class="btn-rose">Rezervovat termín</a>
       <a href="#sluzby" class="btn-outline">Naše služby</a>
@@ -296,114 +232,177 @@
   </div>
   <div class="hero-right">
     <div class="float-card">
-      <div class="fc-label">Spokojenost</div>
-      <div class="fc-val">98 %</div>
-      <div class="fc-sub">zákaznic doporučuje</div>
+      <div class="fc-label">Otevřeno dnes</div>
+      <div class="fc-val">10–20 h</div>
+      <div class="fc-sub">Po–Pá, víkendy dle rezervace</div>
     </div>
     <div class="float-card">
       <div class="fc-label">Hodnocení Google</div>
       <div class="stars">★★★★★</div>
-      <div class="fc-sub">4.9 z 5 hvězdiček</div>
+      <div class="fc-sub">Spokojené zákaznice</div>
     </div>
     <div class="float-card">
-      <div class="fc-label">Zkušenosti</div>
-      <div class="fc-val">8+ let</div>
-      <div class="fc-sub">v oboru</div>
+      <div class="fc-label">Lokalita</div>
+      <div class="fc-val">Praha 1</div>
+      <div class="fc-sub">Vodičkova 677/10, metro Můstek</div>
     </div>
   </div>
 </section>
 
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-item"><span>✔</span> Certifikované nehtařky</div>
+  <div class="trust-item"><span>✔</span> Gelové nehty & Shellac</div>
+  <div class="trust-item"><span>✔</span> Specialistky na zarůstající nehty</div>
+  <div class="trust-item"><span>✔</span> Metro Můstek – 2 minuty pěšky</div>
+  <div class="trust-item"><span>✔</span> Online rezervace</div>
+</div>
+
+<!-- SERVICES -->
 <section class="services" id="sluzby">
   <div class="sec-head">
     <div class="sec-tag">Služby</div>
-    <h2>Co pro vás uděláme</h2>
-    <p>Vyberte si z naší nabídky — každá zákaznice dostane individuální přístup.</p>
+    <h2>Kompletní péče o vaše nehty</h2>
+    <p>Od klasické manikúry po modeláž — každé ošetření provádíme s precizností a láskou k detailu.</p>
   </div>
   <div class="cards">
     <div class="scard">
-      <div class="scard-icon">💅</div>
-      <h3>Gelové nehty</h3>
-      <p>Pevné a lesklé gely v desítkách odstínů. Ideální pro každodenní nositelnost.</p>
-      <div class="scard-foot">
-        <div class="scard-price">od 650 Kč</div>
-        <div class="scard-time">⏱ 90 min</div>
-      </div>
-    </div>
-    <div class="scard">
-      <div class="scard-icon">🎨</div>
-      <h3>Nail Art</h3>
-      <p>Ručně malované vzory, 3D ozdoby, fólie nebo ombre. Váš nehet jako malý originál.</p>
-      <div class="scard-foot">
-        <div class="scard-price">od 200 Kč</div>
-        <div class="scard-time">⏱ dle rozsahu</div>
-      </div>
-    </div>
-    <div class="scard">
-      <div class="scard-icon">🌸</div>
-      <h3>Přírodní manikúra</h3>
-      <p>Péče o přirozené nehty, nehtovou kůžičku a lakování. Jemné a osvěžující ošetření.</p>
+      <div class="scard-icon">✋</div>
+      <h3>Klasická manikúra</h3>
+      <p>Mokrá nebo přístrojová manikúra, péče o nehtové lůžko a kůžičku, lakování. Základ krásných rukou.</p>
       <div class="scard-foot">
         <div class="scard-price">od 350 Kč</div>
+        <div class="scard-time">⏱ 60 min</div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-icon">✨</div>
+      <h3>Gel-lak / Shellac</h3>
+      <p>Dlouhodržící gel-lak nebo Shellac. Výsledek vydrží 3–4 týdny bez odlupování a se skvělým leskem.</p>
+      <div class="scard-foot">
+        <div class="scard-price">od 650 Kč</div>
+        <div class="scard-time">⏱ 75 min</div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-icon">🌿</div>
+      <h3>Japonská manikúra</h3>
+      <p>Přírodní metoda s P-Shine — leštění, výživa a regenerace přirozených nehtů bez laku.</p>
+      <div class="scard-foot">
+        <div class="scard-price">od 550 Kč</div>
+        <div class="scard-time">⏱ 75 min</div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-icon">💎</div>
+      <h3>Modeláž gelových nehtů</h3>
+      <p>Gelová modeláž na tipy nebo šablony. Perfektní tvar, pevnost a délka — přesně podle vašich přání.</p>
+      <div class="scard-foot">
+        <div class="scard-price">od 800 Kč</div>
+        <div class="scard-time">⏱ 120 min</div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-icon">🦶</div>
+      <h3>Pedikúra</h3>
+      <p>Klasická i přístrojová pedikúra. Specialistky na zarůstající nehty. Zdravá a krásná chodidla po celý rok.</p>
+      <div class="scard-foot">
+        <div class="scard-price">od 590 Kč</div>
+        <div class="scard-time">⏱ 75 min</div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-icon">🇫🇷</div>
+      <h3>Francouzská manikúra</h3>
+      <p>Nadčasová elegance — bílé špičky, přirozený lesk. Vhodná pro každou příležitost.</p>
+      <div class="scard-foot">
+        <div class="scard-price">od 450 Kč</div>
         <div class="scard-time">⏱ 60 min</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- WHY -->
 <section class="why" id="proc-my">
   <div class="sec-head">
-    <div class="sec-tag">Proč my</div>
+    <div class="sec-tag">Proč UNO DUE</div>
     <h2>Péče, na které záleží</h2>
-    <p style="color:rgba(255,255,255,.55)">Každá zákaznice si u nás zaslouží ten nejlepší zážitek.</p>
+    <p style="color:rgba(255,255,255,.55)">Jsme salon krásy v centru Prahy s důrazem na kvalitu, hygienu a váš komfort.</p>
   </div>
   <div class="why-grid">
     <div class="why-card">
-      <div class="why-icon">💎</div>
-      <h3>Prémiové materiály</h3>
-      <p>Certifikované gely od světových značek. Vaše zdraví je pro nás priorita.</p>
+      <div class="why-icon">📍</div>
+      <h3>Srdce Prahy</h3>
+      <p>Jsme na Vodičkově ulici, 2 minuty od metra Můstek. Snadno dostupné z celé Prahy MHD i pěšky.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">🌿</div>
-      <h3>Hygienické standardy</h3>
-      <p>Sterilizace nástrojů po každé zákaznici. Čistota je základ naší práce.</p>
+      <h3>Hygiena na prvním místě</h3>
+      <p>Sterilizace nástrojů po každé zákaznici. Používáme certifikované materiály od prověřených dodavatelů.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">👑</div>
       <h3>Individuální přístup</h3>
-      <p>Poslechneme vaše přání a poradíme, co bude nejlépe vypadat právě vám.</p>
+      <p>Každé ošetření začíná konzultací. Přesnou cenu a postup doladíme přímo podle vašich požadavků.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💅</div>
+      <h3>Specialistky na nehty</h3>
+      <p>Naše nehtařky se průběžně vzdělávají v nejnovějších technikách. Výsledek vždy předčí očekávání.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🕐</div>
+      <h3>Dlouhá otevírací doba</h3>
+      <p>Otevřeno Po–Pá až do 20:00. Zvládnete i návštěvu po práci bez spěchu a stresu.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">✂️</div>
+      <h3>Kompletní salon krásy</h3>
+      <p>Vedle nehtů nabízíme také kadeřnictví a depilaci. Vše na jednom místě v centru Prahy.</p>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="kontakt">
   <div class="contact-left">
-    <div class="sec-tag">Kontakt</div>
-    <h2>Rezervujte si svůj termín</h2>
-    <p>Napište nám přes formulář nebo nás kontaktujte přímo. Odpovídáme do 24 hodin.</p>
+    <div class="sec-tag">Kontakt & Rezervace</div>
+    <h2>Přijďte nás navštívit</h2>
+    <p>Rezervujte si termín online, telefonicky nebo e-mailem. Odpovíme vám co nejdříve.</p>
     <div class="contact-item">
       <div class="ci-ico">📍</div>
       <div>
         <div class="ci-lbl">Adresa</div>
-        <div class="ci-val">Mánesova 12, Praha 2 – Vinohrady</div>
+        <div class="ci-val">Vodičkova 677/10, Praha 1 – Nové Město</div>
+        <div class="hours-note">Metro Můstek – 2 min pěšky</div>
       </div>
     </div>
     <div class="contact-item">
       <div class="ci-ico">📞</div>
       <div>
         <div class="ci-lbl">Telefon</div>
-        <div class="ci-val">+420 777 123 456</div>
+        <div class="ci-val">+420 777 774 275</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="ci-ico">✉️</div>
+      <div>
+        <div class="ci-lbl">E-mail</div>
+        <div class="ci-val">info@uno-due.cz</div>
       </div>
     </div>
     <div class="contact-item">
       <div class="ci-ico">🕐</div>
       <div>
         <div class="ci-lbl">Otevírací doba</div>
-        <div class="ci-val">Po–Pá 9:00–19:00 &nbsp;|&nbsp; So 9:00–15:00</div>
+        <div class="ci-val">Po–Pá 10:00–20:00</div>
+        <div class="hours-note">So 10:00–18:00 &nbsp;|&nbsp; Ne 10:00–16:00 (dle rezervace)</div>
       </div>
     </div>
   </div>
   <div class="contact-form">
-    <h3>Pošlete nám zprávu</h3>
+    <h3>Napište nám</h3>
     <div class="fg-row">
       <div class="fg"><label>Jméno</label><input type="text" placeholder="Jana Nováková"></div>
       <div class="fg"><label>Telefon</label><input type="tel" placeholder="+420 777 000 000"></div>
@@ -413,20 +412,27 @@
       <label>Služba</label>
       <select>
         <option>Vyberte službu...</option>
-        <option>Gelové nehty</option>
-        <option>Nail Art</option>
-        <option>Přírodní manikúra</option>
+        <option>Klasická manikúra</option>
+        <option>Gel-lak / Shellac</option>
+        <option>Japonská manikúra (P-Shine)</option>
+        <option>Modeláž gelových nehtů</option>
+        <option>Francouzská manikúra</option>
         <option>Pedikúra</option>
+        <option>Jiné</option>
       </select>
     </div>
-    <div class="fg"><label>Zpráva</label><textarea placeholder="Preferovaný termín, přání..."></textarea></div>
-    <button class="submit-btn">Odeslat rezervaci →</button>
+    <div class="fg"><label>Zpráva / preferovaný termín</label><textarea placeholder="Např. preferuji odpoledne, pátek..."></textarea></div>
+    <button class="submit-btn" onclick="return false;">Odeslat rezervaci →</button>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="flogo">Luxe<span>Nails</span></div>
-  <p>© 2026 LuxeNails Studio &nbsp;·&nbsp; Praha – Vinohrady &nbsp;·&nbsp; Všechna práva vyhrazena</p>
+  <div>
+    <div class="flogo">UNO <span>DUE</span></div>
+    <div style="margin-top:4px;">Vodičkova 677/10, Praha 1 &nbsp;·&nbsp; info@uno-due.cz &nbsp;·&nbsp; +420 777 774 275</div>
+  </div>
+  <div>© 2026 Salon krásy UNO DUE &nbsp;·&nbsp; <a href="#">Ochrana osobních údajů</a></div>
 </footer>
 
 </body>
